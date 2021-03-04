@@ -1,7 +1,7 @@
 #!/bin/bash
 echo "update"
 sudo apt update
-sudo apt upgrade -y
+sudo apt upgrade -y || true
 
 echo 'install teams'
 wget https://packages.microsoft.com/repos/ms-teams/pool/main/t/teams/teams_1.3.00.30857_amd64.deb
@@ -34,3 +34,7 @@ chmod +x install_minikube.sh
 echo 'install bamboo'
 chmod +x install_virtual_box.sh
 ./install_virtual_box.sh || true
+
+echo 'install gnome-tweaks'
+sudo apt install gnome-tweaks
+gnome-tweaks
