@@ -1,0 +1,7 @@
+#!/bin/bash
+lsblk
+sudo file -s /dev/xvdb
+sudo lsblk -f
+sudo mkfs -t xfs /dev/xvdb
+sudo mkdir /data
+sudo mount /dev/xvdb /data
